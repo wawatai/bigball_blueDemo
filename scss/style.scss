@@ -207,8 +207,7 @@ html {
                         top: 20px;
                         left: -162px;
                         z-index: -4;
-                        opacity: 0;
-                        animation: showUp 0.1s 0.2s ease-in-out forwards;
+                        animation: invisible 0.2s ease-in-out, showUp 0.1s 0.2s ease-in-out forwards;
                     }
 
                     .bgItem {
@@ -235,8 +234,7 @@ html {
                         top: -170px;
                         left: -199px;
                         z-index: -4;
-                        opacity: 0;
-                        animation: showUp 0.1s 0.2s ease-in-out forwards;
+                        animation: invisible 0.2s ease-in-out, showUp 0.1s 0.2s ease-in-out forwards;
                     }
 
                     .soccer {
@@ -278,6 +276,15 @@ html {
                 z-index: -999;
             }
         }
+    }
+}
+
+@keyframes invisible {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
     }
 }
 

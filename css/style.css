@@ -241,9 +241,8 @@ html body main .center .top .objTop {
   top: 20px;
   left: -162px;
   z-index: -4;
-  opacity: 0;
-  -webkit-animation: showUp 0.1s 0.2s ease-in-out forwards;
-          animation: showUp 0.1s 0.2s ease-in-out forwards;
+  -webkit-animation: invisible 0.2s ease-in-out, showUp 0.1s 0.2s ease-in-out forwards;
+          animation: invisible 0.2s ease-in-out, showUp 0.1s 0.2s ease-in-out forwards;
 }
 html body main .center .top .bgItem {
   width: 827px;
@@ -267,9 +266,8 @@ html body main .center .bottom .objDown {
   top: -170px;
   left: -199px;
   z-index: -4;
-  opacity: 0;
-  -webkit-animation: showUp 0.1s 0.2s ease-in-out forwards;
-          animation: showUp 0.1s 0.2s ease-in-out forwards;
+  -webkit-animation: invisible 0.2s ease-in-out, showUp 0.1s 0.2s ease-in-out forwards;
+          animation: invisible 0.2s ease-in-out, showUp 0.1s 0.2s ease-in-out forwards;
 }
 html body main .center .bottom .soccer {
   width: 744px;
@@ -307,6 +305,23 @@ html body main .bg {
   z-index: -999;
 }
 
+@-webkit-keyframes invisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes invisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @-webkit-keyframes ball {
   0% {
     top: -232px;
@@ -325,7 +340,6 @@ html body main .bg {
     opacity: 1;
   }
 }
-
 @keyframes ball {
   0% {
     top: -232px;
