@@ -104,7 +104,7 @@ html body main .center .top .logo {
   background-size: contain;
   z-index: 100;
   position: absolute;
-  top: 133px;
+  top: 71px;
   left: 313px;
 }
 html body main .center .top .inputBox {
@@ -114,7 +114,7 @@ html body main .center .top .inputBox {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  top: 350px;
+  top: 292px;
   left: 343px;
   z-index: 100;
 }
@@ -230,20 +230,20 @@ html body main .center .top .unionLogo {
   background: url(../img/union.png) no-repeat center;
   background-size: contain;
   position: absolute;
-  top: 461px;
+  top: 403px;
   left: 352px;
 }
-html body main .center .top .mainObject {
-  width: 1611px;
+html body main .center .top .objTop {
+  width: 1594px;
   height: 980px;
-  background: url(../img/mainObject.png) no-repeat;
-  background-size: contain;
+  background: url(../img/mainObject_top.png) no-repeat;
   position: absolute;
-  top: 84px;
-  left: -199px;
+  top: 20px;
+  left: -162px;
   z-index: -4;
-  -webkit-animation: showIn 0.5s ease-in forwards;
-          animation: showIn 0.5s ease-in forwards;
+  opacity: 0;
+  -webkit-animation: showUp 0.1s 0.2s ease-in-out forwards;
+          animation: showUp 0.1s 0.2s ease-in-out forwards;
 }
 html body main .center .top .bgItem {
   width: 827px;
@@ -251,7 +251,7 @@ html body main .center .top .bgItem {
   background: url(../img/BGitem.png) no-repeat;
   background-size: contain;
   position: absolute;
-  top: 115px;
+  top: 55px;
   left: 134px;
 }
 html body main .center .bottom {
@@ -259,14 +259,17 @@ html body main .center .bottom {
   height: 50%;
   position: relative;
 }
-html body main .center .bottom .text {
-  width: 682px;
-  height: 561px;
-  background: url(../img/text.png) no-repeat;
-  background-size: contain;
+html body main .center .bottom .objDown {
+  width: 1525px;
+  height: 1198px;
+  background: url(../img/mainObject_down.png) no-repeat;
   position: absolute;
-  top: 433px;
-  left: -112px;
+  top: -170px;
+  left: -199px;
+  z-index: -4;
+  opacity: 0;
+  -webkit-animation: showUp 0.1s 0.2s ease-in-out forwards;
+          animation: showUp 0.1s 0.2s ease-in-out forwards;
 }
 html body main .center .bottom .soccer {
   width: 744px;
@@ -274,8 +277,11 @@ html body main .center .bottom .soccer {
   background: url(../img/soccer.png) no-repeat;
   background-size: contain;
   position: absolute;
-  bottom: -64px;
+  top: -124px;
   left: 167px;
+  opacity: 1;
+  -webkit-animation: ball 0.2s ease-out forwards;
+          animation: ball 0.2s ease-out forwards;
 }
 html body main .center .bottom .light {
   width: 557px;
@@ -283,11 +289,13 @@ html body main .center .bottom .light {
   background: url(../img/light.png) no-repeat;
   background-size: contain;
   position: absolute;
-  top: 10px;
-  left: 391px;
-  opacity: 0.8;
+  top: -53px;
+  left: 389px;
+  opacity: 0;
   -webkit-filter: brightness(1.1);
           filter: brightness(1.1);
+  -webkit-animation: fadein 0.1s 0.25s ease-in-out forwards;
+          animation: fadein 0.1s 0.25s ease-in-out forwards;
 }
 html body main .bg {
   width: 100%;
@@ -297,4 +305,82 @@ html body main .bg {
   position: absolute;
   top: 0;
   z-index: -999;
+}
+
+@-webkit-keyframes ball {
+  0% {
+    top: -232px;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-filter: blur(5);
+            filter: blur(5);
+    opacity: 0;
+  }
+  100% {
+    top: -124px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(1);
+            filter: blur(1);
+    opacity: 1;
+  }
+}
+
+@keyframes ball {
+  0% {
+    top: -232px;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-filter: blur(5);
+            filter: blur(5);
+    opacity: 0;
+  }
+  100% {
+    top: -124px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(1);
+            filter: blur(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+@-webkit-keyframes showUp {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes showUp {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
 }
