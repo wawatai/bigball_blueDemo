@@ -150,7 +150,6 @@ html {
                                 &:last-child {
                                     margin: 0 0 8px 0;
                                 }
-
                             }
                         }
     
@@ -171,12 +170,12 @@ html {
                             right: -157px;
                             z-index: 4;
 
-                          
                             &:hover,&:active,&.active {
                                 background: linear-gradient(to bottom, #7b652d 0%, #b0964b 100%);
                                 color: #ffffff;
                             }
                         }
+                        
                         .btnLine {
                             width: 143px;
                             height: 143px;
@@ -262,7 +261,6 @@ html {
                         animation: fadein 0.1s 0.25s ease-in-out forwards;
                     }
                 }
-
             }
 
             //背景
